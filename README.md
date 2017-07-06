@@ -1,0 +1,2 @@
+# burgerSequelize
+Sequelized burger project
