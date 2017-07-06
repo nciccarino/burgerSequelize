@@ -1,24 +1,19 @@
-var mysql = require("mysql");
+var Sequelize = require("sequelize");
 
-var connection; 
+var sequelize; 
 
 if (process.env.JAWSDB_URL) {
-	connection = mysql.createConnection(process.env.JAWSDB_URL); 
+	sequelize = new Sequelize(process.env.JAWSDB_URL); 
 } else {
-	connection = mysql.createConnection({
-  		host: "localhost",
-  		user: "root",
-  		password: "",
-  		database: "burgersSequelize_db"
-	});
+	sequelize = new Sequelize("burgers2_db", "root", "", {
+    host: "localhost", 
+    dialect: "mysql", 
+    pool: {
+      max: 5,
+      min: 0,
+      idle: 10000
+    }
+  });
 }
 
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
-
-module.exports = connection;
+module.exports = sequelize;
