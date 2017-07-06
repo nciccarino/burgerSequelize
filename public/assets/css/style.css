@@ -1,0 +1,43 @@
+#body {
+	background-color: orange; 
+}
+
+#jumbotron {
+	background-color: #4aaaa5;
+}
+
+#colRight {
+	background-color: #4aaaa5; 
+	border-radius: 6px;
+	width: 35%;
+}
+
+#colLeft {
+	background-color: #4aaaa5;
+	border-radius: 6px;
+	width: 35%;
+	margin-right: 40px;
+	margin-left: 15px;
+}
+
+#colBottom {
+	background-color: #4aaaa5; 
+	margin-top: 30px;
+	border-radius: 6px; 
+	margin-left: 15px;
+	width: 97%;
+}
+
+.burger {
+	height: 250px;
+	width: 200px; 
+	margin: auto;
+	display: block;
+}
+
+#colTop {
+	margin-bottom: 30px; 
+	width: 20%;
+	margin-right: 30px;
+	margin-left: 20px;
+}
