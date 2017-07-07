@@ -1,15 +1,15 @@
 <div class= "container">
   <div class="jumbotron jumbotron-fluid" id = "jumbotron">
     <div class="container">
-      <h1 class="display-3" ><b>Burger Town<b></h1>
+      <h1 class="display-3" ><i class = "glyphicon glyphicon-fire"></i><b> Burger Town<b></h1>
       <hr>
-      <p class="lead">Add and remove Burgers</p>
+      <h3 class="lead">Add and remove Burgers</h3>
     </div>
   </div>
   <div class="row">
     <div class="col-md-4" id = "colLeft">
       <br>
-      <h2><b>Uneaten Burgers!<b></h2>
+      <h2><i class = "glyphicon glyphicon-exclamation-sign"></i><b> Uneaten Burgers!<b></h2>
       <hr>
       <ul>
         {{#each burgers}}
@@ -20,7 +20,6 @@
                 <input type="hidden" name="devoured" value="1">
                 <button type="submit">Devour it!</button>
               </form>
-              <br>
               {{> burgers/delete-burger}}
               <br>
             </li>
@@ -35,7 +34,7 @@
     </div>
     <div class="col-md-4" id = "colRight">
       <br>
-      <h2><b>Eaten Burgers!<b></h2>
+      <h2><i class = "glyphicon glyphicon-ok-circle"></i><b> Eaten Burgers!<b></h2>
       <hr>
       <ul>
         {{#each burgers}}
@@ -55,7 +54,7 @@
   <div class ="row">
     <div class="col-md-12" id = "colBottom">
       <br>
-      <h2><b>Add a Burger<b></h2>
+      <h2><b>Add a Burger <b><i class = "glyphicon glyphicon-cutlery"></i></h2>
       <hr>
       <form class="create-update-form" action="/" method="POST">
         <div class="form-group">
