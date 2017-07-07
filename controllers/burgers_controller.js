@@ -2,11 +2,13 @@ var express = require("express");
 var router = express.Router(); 
 var db = require("../models");
 
-  router.get("/", function(req, res) {
+// module.exports = function(app) {
+
+router.get("/", function(req, res) {
     db.Burger.findAll({}).then(function(data) {
       var obj = {
         burgers: data
-      };
+      }
       res.render("index", obj); 
     }); 
   });
@@ -45,5 +47,7 @@ var db = require("../models");
       res.redirect("/");
     }); 
   });
+
+// }//end 
 
   module.exports = router; 
