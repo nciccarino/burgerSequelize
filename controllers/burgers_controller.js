@@ -25,14 +25,12 @@ router.get("/", function(req, res) {
 
   router.put("/:id", function(req, res) {
     db.Burger.update({
-      burger_name: req.body.name,
       devoured: req.body.devoured
     }, {
       where: {
-        id: req.body.id
+        id: req.params.id
       }
     }).then(function(data) {
-
       res.redirect("/");
     })
   });
