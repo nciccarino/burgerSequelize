@@ -2,12 +2,12 @@ var express = require("express");
 var router = express.Router(); 
 var db = require("../models");
 
-module.exports = function(router) {
-
   router.get("/", function(req, res) {
     db.Burger.findAll({}).then(function(data) {
-
-      res.render("index", data); 
+      var obj = {
+        burgers: data
+      };
+      res.render("index", obj); 
     }); 
   });
 
@@ -46,4 +46,4 @@ module.exports = function(router) {
     }); 
   });
 
-}; //end
+  module.exports = router; 
