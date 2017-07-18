@@ -4,4 +4,4 @@
 
 ## Users are able to update and delete their content. 
 
-## Application utilizes Sequelize, Handlebars, Express, and other npm support packages.
+## Application utilizes Sequelize, MySQL, Handlebars, Express, and other npm support packages.
